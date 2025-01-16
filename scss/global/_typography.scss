@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/Karla-VariableFont_wght.ttf');
+}
+
+:root {
+  font-family: 'Karla', serif;
+  font-optical-sizing: auto;
+  font-size: 62.5%;
+}
+
+.text-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.1rem;
+}
+
+.text-body-m-bold {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0rem;
+}
+
+.text-body-m {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+}
+
+.text-body-s {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+}

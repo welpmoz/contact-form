@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--green-200);
+}
+
+input[type='text'],
+textarea {
+  font-family: inherit;
+}

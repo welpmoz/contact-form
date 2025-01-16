@@ -1,0 +1,65 @@
+@use '../utils/' as u;
+
+.contact-form__options {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    border: none;
+  }
+
+  &-body {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  @include u.breakpoint(medium) {
+    &-body {
+      flex-direction: row;
+    }
+  }
+}
+
+.contact-form__option {
+  &-label {
+    flex-grow: 1;
+    border: 0.1rem solid var(--grey-500);
+    border-radius: 0.8rem;
+    padding: 1.2rem 2.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      border-color: var(--green-600);
+    }
+
+    &:has(.contact-form__option-radio:checked) {
+      background-color: var(--green-200);
+    }
+  }
+
+  &-radio {
+    appearance: none;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--grey-500);
+
+    &:checked {
+      background-image: url('./assets/images/icon-checkbox-check.svg');
+      background-size: cover;
+      border-color: var(--green-600);
+    }
+
+    &:focus {
+      outline: 0.3rem solid var(--accent);
+    }
+  }
+}

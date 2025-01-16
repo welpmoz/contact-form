@@ -1,0 +1,19 @@
+.contact-form__submit-button {
+  width: 100%;
+  padding: 1.6rem 0rem;
+  text-align: center;
+  background-color: var(--green-600);
+  border: none;
+  border-radius: 0.8rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--accent);
+  }
+
+  &:focus {
+    outline-color: var(--accent);
+    outline-style: solid;
+    outline-width: 0.3rem;
+  }
+}
