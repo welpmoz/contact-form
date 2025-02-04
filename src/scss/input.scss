@@ -1,0 +1,47 @@
+@use './util.scss' as u;
+
+.Input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  &__label {
+    @include u.text-body-s();
+    color: var(--grey-900);
+
+    &::after {
+      content: ' *';
+      color: var(--green-600);
+    }
+  }
+
+  &__body {
+    @include u.text-body-m(400);
+    padding: 1.2rem 2.4rem;
+    color: var(--grey-900);
+    border-radius: 0.8rem;
+    border: 0.1rem solid var(--grey-500);
+    cursor: pointer;
+    transition: border-color 0.3s ease-out;
+
+    &:hover {
+      border-color: var(--green-600);
+    }
+  }
+
+  &__error-message {
+    display: none;
+    @include u.text-body-s();
+    color: var(--red);
+  }
+
+  &--error {
+    .Input__body {
+      border-color: var(--red);
+    }
+
+    .Input__error-message {
+      display: inherit;
+    }
+  }
+}

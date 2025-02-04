@@ -1,0 +1,17 @@
+@use './util.scss' as u;
+
+.Button {
+  @include u.text-body-m(700);
+  color: var(--white);
+  background-color: var(--green-600);
+  border: none;
+  text-align: center;
+  padding: 1.6rem 0rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}

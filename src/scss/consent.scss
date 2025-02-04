@@ -1,0 +1,53 @@
+@use './util.scss' as u;
+
+.Consent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+    align-items: center;
+  }
+
+  &__label {
+    @include u.text-body-s();
+    color: var(--grey-900);
+
+    &::after {
+      content: ' *';
+      color: var(--green-600);
+    }
+  }
+
+  &__body {
+    margin: 0.6rem;
+    appearance: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 0.2rem;
+    border: 0.2rem solid var(--grey-500);
+    cursor: pointer;
+
+    &:checked {
+      border: none;
+      background-image: url('../assets/images/icon-checkbox-check.svg');
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__error-message {
+    display: none;
+    @include u.text-body-s();
+    color: var(--red);
+  }
+
+  &--error {
+    .Consent__error-message {
+      display: inherit;
+    }
+  }
+}

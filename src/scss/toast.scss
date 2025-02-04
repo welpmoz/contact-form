@@ -1,0 +1,65 @@
+@use './util.scss' as u;
+
+.Toast {
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  left: 0rem;
+  display: none;
+  padding: 0rem 1.6rem;
+
+  &__wrapper {
+    margin: 2.4rem 0.4rem;
+    background-color: var(--grey-900);
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__header {
+    @include u.text-body-m(700);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+
+    &::before {
+      content: url('../assets/images/icon-success-check.svg');
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__body {
+    @include u.text-body-s();
+    color: var(--green-200);
+  }
+
+  &--visible {
+    display: grid;
+  }
+
+  @include u.breakpoint(medium) {
+    grid-template-columns: repeat(8, 7.2rem);
+    gap: 1.6rem;
+    justify-content: center;
+
+    &__wrapper {
+      margin: 2.4rem 3.1rem;
+      grid-column: 2 / 8;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    grid-template-columns: repeat(12, 6.4rem);
+    gap: 3.2rem;
+
+    &__wrapper {
+      margin: 2.4rem 4.7rem;
+      grid-column: 4 / 10;
+    }
+  }
+}

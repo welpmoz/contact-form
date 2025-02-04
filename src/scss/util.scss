@@ -1,0 +1,36 @@
+@use 'sass:math';
+@use 'sass:map';
+
+@mixin text-body-s {
+  font-family: 'Karla';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+@mixin text-heading {
+  font-family: 'Karla';
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1;
+  letter-spacing: -0.1rem;
+}
+
+@mixin text-body-m($weight) {
+  font-family: 'Karla';
+  font-weight: $weight;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+$breakpoints: (
+  'small': math.div(375, 16) * 1rem,
+  'medium': math.div(680, 16) * 1rem,
+  'large': math.div(1200, 16) * 1rem,
+);
+
+@mixin breakpoint($size) {
+  @media (width >= map.get($breakpoints, $size)) {
+    @content;
+  }
+}
