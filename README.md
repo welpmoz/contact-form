@@ -49,8 +49,8 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Links
 
-- Solution URL: [GitHub repository](https://github.com/welpmoz/faq-accordion).
-- Live Site URL: [Live site](https://welpmoz.github.io/faq-accordion/)
+- Solution URL: [GitHub repository](https://github.com/welpmoz/contact-form).
+- Live Site URL: [Live site](https://lustrous-faloodeh-173c73.netlify.app/)
 
 ## My process
 
